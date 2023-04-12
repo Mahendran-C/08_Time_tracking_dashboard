@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="person-container">
+          <figure class="person--img">
+            <img src="./images/image-jeremy.png" alt="image-jeremy" />
+          </figure>
+          <div class="text--container">
+            <p class="card--report">Report for</p>
+            <h1 class="card--person">Jeremy Robson</h1>
+          </div>
+        </div>
+        <section class="card--period">
+          <p id="card-daily" class="active" onclick="handleClick('card-daily')">
+            Daily
+          </p>
+          <p id="card-weekly" onclick="handleClick('card-weekly')">Weekly</p>
+          <p id="card-monthly" onclick="handleClick('card-monthly')">Monthly</p>
+        </section>
+      </div>
+      <div class="content">
+        <div class="content--work">
+          <section class="work">
+            <div class="work--hrs">
+              <p class="title">Work</p>
+              <figure>
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+              </figure>
+            </div>
+            <!-- daily -->
+            <div class="daily work--previous">
+              <p class="hrs">5hrs</p>
+              <p><span>Yesterday - 7hrs </span></p>
+            </div>
+            <!-- daily -->
+            <!-- weekly -->
+            <div class="weekly work--previous">
+              <p class="hrs">32hrs</p>
+              <p><span>Last Week - 36hrs</span></p>
+            </div>
+
+            <!-- weekly -->
+
+            <!-- monthly -->
+            <div class="monthly work--previous">
+              <p class="hrs">103hrs</p>
+              <p><span>Last Month - 128hrs</span></p>
+            </div>
+
+            <!-- monthly -->
+          </section>
+        </div>
+        <div class="content--play">
+          <section class="play">
+            <div class="play--hrs">
+              <p class="title">Play</p>
+              <figure>
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+              </figure>
+            </div>
+            <!-- daily -->
+            <div class="daily play--previous">
+              <!-- daily -->
+              <p class="hrs">1hr</p>
+              <p><span>Yesterday - 2hrs</span></p>
+            </div>
+            <div class="weekly play--previous">
+              <p class="hrs">10hrs</p>
+              <!-- weekly -->
+              <p><span>Last Week - 8hrs</span></p>
+            </div>
+            <!-- weekly -->
+            <div class="monthly play--previous">
+              <p class="hrs">23hrs</p>
+              <!-- monthly -->
+              <p><span>Last Month - 29hrs</span></p>
+              <!-- monthly -->
+            </div>
+          </section>
+        </div>
+        <div class="content--study">
+          <section class="study">
+            <div class="study--hrs">
+              <p class="title">Study</p>
+              <figure>
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+              </figure>
+            </div>
+            <div class="daily study--previous">
+              <p class="hrs">0hrs</p>
+              <!-- daily -->
+              <p><span>Yesterday - 1hr</span></p>
+            </div>
+            <!-- daily -->
+            <div class="weekly study--previous">
+              <p class="hrs">4hrs</p>
+
+              <!-- weekly -->
+              <p><span>Last Week - 7hrs</span></p>
+            </div>
+            <!-- weekly -->
+            <div class="monthly study--previous">
+              <p class="hrs">13hrs</p>
+              <!-- monthly -->
+              <p><span> Last Month - 19hrs</span></p>
+            </div>
+            <!-- monthly -->
+          </section>
+        </div>
+        <div class="content--exercise">
+          <section class="exercise">
+            <div class="exercise--hrs">
+              <p class="title">Exercise</p>
+              <figure>
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+              </figure>
+            </div>
+            <div class="daily exercise--previous">
+              <p class="hrs">1hr</p>
+              <!-- daily -->
+              <p><span>Yesterday - 1hr</span></p>
+              <!-- daily -->
+            </div>
+            <div class="weekly exercise--previous">
+              <p class="hrs">4hrs</p>
+              <!-- weekly -->
+              <p><span>Last Week - 5hrs</span></p>
+              <!-- weekly -->
+            </div>
+            <div class="monthly exercise--previous">
+              <p class="hrs">11hrs</p>
+              <!-- monthly -->
+              <p><span> Last Month - 18hrs</span></p>
+              <!-- monthly -->
+            </div>
+          </section>
+        </div>
+        <div class="content--social">
+          <section class="social">
+            <div class="social--hrs">
+              <p class="title">Social</p>
+              <figure>
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+              </figure>
+            </div>
+            <div class="daily social--previous">
+              <p class="hrs">1hr</p>
+              <!-- daily -->
+              <p><span>Yesterday - 3hrs</span></p>
+              <!-- daily -->
+            </div>
+            <div class="weekly social--previous">
+              <p class="hrs">5hrs</p>
+              <!-- weekly -->
+              <p><span>Last Week - 10hrs</span></p>
+              <!-- weekly -->
+            </div>
+            <div class="monthly social--previous">
+              <p class="hrs">21hrs</p>
+              <!-- monthly -->
+              <p><span>Last Month - 23hrs</span></p>
+              <!-- monthly -->
+            </div>
+          </section>
+        </div>
+        <div class="content--selfCare">
+          <section class="selfCare">
+            <div class="selfCare--hrs">
+              <p class="title">Self Care</p>
+              <figure>
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+                <img class="ellipsis-icon" src="./images/icon-ellipsis.svg" />
+              </figure>
+            </div>
+            <div class="daily selfCare--previous">
+              <p class="hrs">0hrs</p>
+              <!-- daily -->
+              <p><span>Yesterday - 1hr</span></p>
+              <!-- daily -->
+            </div>
+            <div class="weekly selfCare--previous">
+              <p class="hrs">2hrs</p>
+              <!-- weekly -->
+              <p><span>Last Week - 2hrs</span></p>
+              <!-- weekly -->
+            </div>
+            <div class="monthly selfCare--previous">
+              <p class="hrs">7hrs</p>
+              <!-- monthly -->
+              <p><span>Last Month - 11hrs</span></p>
+              <!-- monthly -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+::after,::before,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Typography and Font Styles */
+    --FF: 'Rubik', sans-serif;
+    --FS: 18px;
+
+    /* COLORS */
+    /* Primary Colors */
+    --blue: hsl(256, 80%, 60%);
+    --workLightRed: hsl(15, 100%, 70%);
+    --playSoftBlue:  hsl(195, 74%, 62%);
+    --studyLightRed:hsl(348, 100%, 68%);
+    --exerciseLimeGreen: hsl(145, 58%, 55%);
+    --socialViolet: hsl(264, 64%,52%);
+    --selfCareSoftOrange: hsl(43, 84%, 65%);
+
+    /* Neutral colors */
+    --veryDarkBlue:hsl(226, 43%, 10%);
+    --darkBlue: hsl(235, 46%, 20%);
+    --desaturatedBlue: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+
+}
+
+body{
+    width: 100%;
+    font-family: var(--FF);
+    background-color: var(--veryDarkBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.container{
+    width: 80%;
+    margin: 80px 0;
+}
+.card{
+    background-color: var(--darkBlue);
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+ 
+}
+.person-container{
+        background-color: #5843e5;
+        width: 100%;
+        display: flex;
+        align-items: space-between;
+        gap: 20px;
+        padding: 32px 20px;
+        border-radius: 1rem;
+}
+img{
+    width: 64px;
+    height: 64px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.text--container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 4px;
+}
+.card--report{
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 70%;
+}
+.card--person{
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight: 300;
+}
+.card--period{
+    display: flex;
+    height: 64px;;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--paleBlue);
+}
+.card--period p:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.active{
+    color: #fff;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+}
+.content--work, .content--play, .content--study, .content--exercise, .content--social, .content--selfCare{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top -12px right  32px  ;
+    border-radius: 1rem ;
+}
+.content--work{
+    margin-top: 1.5rem;
+    background-image: url(./images/icon-work.svg);
+    background-color: var(--workLightRed);
+}
+.work, .play, .study, .exercise, .social, .selfCare{
+    width: 100%;
+    height: calc(100% - 2.2rem);
+    margin-top: 2.2rem;
+    background-color: var(--darkBlue);
+    border-radius: 1rem;
+    padding: 2rem ;
+    color: var(--paleBlue);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+.content section:hover{
+    cursor: pointer;
+    background-color: var(--blue);
+    transition: all 1s ease-out;
+
+}
+.work--hrs, .play--hrs , .study--hrs, .exercise--hrs, .social--hrs, .selfCare--hrs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.title, .hrs{
+    color: #fffffff6;
+    font-style: var(--ff);
+    font-weight: 500;
+}
+.hrs{
+    font-weight: 300;
+    font-size: 2rem;
+    opacity: 90%;
+}
+.content figure{
+    opacity: 50%;
+}
+.ellipsis-icon{
+    width: 3px;
+    height: 3px;
+}
+.content figure:hover{
+    opacity: 95%;
+}
+.work--previous, .play--previous, .study--previous, .exercise--previous, .social--previous, .selfCare--previous{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+p span{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.weekly {
+    display: none;
+}
+.monthly{
+    display: none;
+}
+
+.content--play{
+    background-image: url(./images/icon-play.svg);
+    background-color: var(--playSoftBlue);
+}
+
+.content--study{
+    background-color: var(--studyLightRed);
+    background-image: url(./images/icon-study.svg);
+}
+
+.content--exercise{
+    background-color: var(--playSoftBlue);
+    background-image: url(./images/icon-exercise.svg);
+}
+.content--social{
+    background-color: var(--socialViolet);
+    background-image: url(./images/icon-social.svg);
+}
+.content--selfCare{
+    background-color: var(--selfCareSoftOrange);
+    background-image: url(./images/icon-self-care.svg);
+}
+
+@media screen and (min-width: 960px){
+    body{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        max-width: 1440px;
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1rem;
+    }
+    .card{
+        width: 25%;
+        width: max-content;
+    }
+    .person-container{
+        display: flex;
+        flex-flow: column wrap;
+        padding: 40px 20px 80px 40px;
+    }
+    .card--person{
+        font-size: 2rem;
+    }
+    .card--period{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        margin: 4rem 2rem;
+        gap: 1rem;
+    }
+    
+    .content{
+      width: 75%;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+    }
+    .content--work{
+        margin-top: 0;
+    }
+
+    .work--previous, .play--previous, .study--previous, .exercise--previous, .social--previous, .selfCare--previous{
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .hrs{
+        font-size: 3rem;
+    }
+}
