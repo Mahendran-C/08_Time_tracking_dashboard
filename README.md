@@ -45,4 +45,4 @@ Users should be able to:
 
 <!-- Color picker site -->
 
-- [Color picker from our image resource 1](https://imagecolorpicker.com/en) - This helped me for to pick appropriate color. I really liked this site and will use it going forward.
+- [Color picker from our image resource 1](https://imagecolorpicker.com/en) - This helped me to pick appropriate color. I really liked this site and will use it going forward.
