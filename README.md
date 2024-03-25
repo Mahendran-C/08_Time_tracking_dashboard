@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Mahendran-C/08_time_tracking_dashboard)
-- Live Site URL: [Add live site URL here](https://mahendran-c.github.io/08_time_tracking_dashboard/)
+- Solution URL: [https://github.com/Mahendran-C/08_time_tracking_dashboard]
+- Live Site URL: [https://mahendran-c.github.io/08_time_tracking_dashboard/]
 
 ## My process
 
